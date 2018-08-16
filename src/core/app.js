@@ -8,14 +8,12 @@ function App({ store, client }){
   return(
     <ApolloProvider store={store} client={client}>
       <Router>
-          <React.Fragment>
-            <Switch>
-              <Route exact path="/" component={Tools} />
-              <Route path="/new" component={AddTool} />
-              <Route path="/:id" component={EditTool}/>
-              <Redirect to="/" />
-            </Switch>
-          </React.Fragment>
+          <Switch>
+            <Route exact path="/" component={Tools} />
+            <Route path="/new" component={AddTool} />
+            <Route path="/:id" component={EditTool}/>
+            <Redirect to="/" />
+          </Switch>
       </Router>
     </ApolloProvider>
   )
